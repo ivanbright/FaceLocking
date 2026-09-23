@@ -90,10 +90,11 @@ consumes.
 ## What you can tune
 
 - `--threshold` — cosine distance for accepting the identity (about `0.34`).
-- `--smile-on` / `--smile-off` — how far the mouth/face-width ratio must rise
-  above *your* neutral before it counts as a smile. Smile detection is
-  adaptive: it learns your neutral mouth width, because a fixed threshold
-  works for nobody.
+- `--smile-on` / `--smile-off` / `--smile-frames` — how far the mouth/face-width
+  ratio must rise above *your* neutral before it counts as a smile, and how many
+  consecutive frames it must hold so talking/jitters don't trip it. Smile
+  detection is adaptive: it learns your neutral mouth width, because a fixed
+  threshold works for nobody. Watch `smile neu d` on the bottom-left readout.
 - `--brightness` / `--contrast` / `--saturation` / `--gain` / `--exposure` —
   camera color, only if you need it.
 - `--no-quality` — skip the autofocus + sharpness fix.
