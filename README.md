@@ -1,5 +1,11 @@
 # FaceLocking
 
+> This is the face-locking half of a two-repo project. The full rig —
+> enrollment, recognition, servo hardware, and firmware — lives in
+> **https://github.com/ivanbright/facerecognition**. Clone that one if you
+> want the whole thing; clone this one if you only care about locking onto
+> one person and watching what they do.
+
 A camera that locks onto *your* face and ignores everyone else. Once it has
 decided that the face in front of it is the person you enrolled, it stays
 with that person — strangers can walk in front of the camera and they just
@@ -52,9 +58,11 @@ lock and goes back to searching.
 3. Enroll yourself (this writes `data/face_database.pkl`):
 
    ```bash
-   python working_face_recognition.py   # pick mode 1
+   python working_face_recognition.py
    ```
-   `SPACE` grabs an aligned sample, `s` saves, `q` quits.
+   The script asks `Choose mode:` — enter `1` (enroll).
+   `SPACE` grabs an aligned sample, `s` saves, `q` quits. (Mode `2` is the
+   recognition + tracking demo; the lock project below has its own runner.)
 
 4. Lock onto yourself:
 
