@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Large model binaries (grab them from the links in the README)
+models/*.onnx
+models/*.task
+*.onnx
+
+# Local enrollment database (your face, not mine)
+data/
+
+# IDE / OS
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
